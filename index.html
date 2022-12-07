@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUMBLER</title>
+    <style>
+        .tumblerDiv {
+            position: absolute;
+            width: 500px;
+            height: 250px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #686868;
+            border-radius: 360px;
+            transition-duration: 0.3s;
+        }
+        .tumblerBut {
+            position: absolute;
+            width: 45%;
+            height: 90%;
+            top: 5%;
+            left: 2.5%;
+            bottom: 5%;
+            right: 2.5%;
+            border-radius: 50%;
+            border: 0;
+            background-color: white;
+            transition-duration: 0.3s;
+        }
+        button.Act {
+            transform: translateX(112%);
+        }
+        Div.Act {
+            background-color: #10df55;
+        }
+    </style>
+    <script>
+        function tumblerAct() {
+            let button = document.getElementsByClassName("tumblerBut")[0];
+            let tumb = document.getElementsByClassName("tumblerDiv")[0];
+            if (button.classList.contains("Act")) {
+                button.classList.remove("Act");
+            } else {
+                button.classList.add("Act");
+            }
+            if (tumb.classList.contains("Act")) {
+                tumb.classList.remove("Act");
+            } else {
+                tumb.classList.add("Act");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="tumblerDiv">
+        <button class="tumblerBut" onclick="tumblerAct();"></button>
+    </div>
+</body>
+</html>
